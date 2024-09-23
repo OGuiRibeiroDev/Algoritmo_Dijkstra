@@ -17,12 +17,12 @@ int distancia_minima(int distancia[], int conjunto_caminho_minimo[]) {
 }
 
 void dijkstra(int grafo[V][V], int indice, int distancia[], int caminho_anterior[]) {
-    int conjuntoCaminhoMinimo[V]; // sptSet[i] sera verdadeiro se o vertice i estiver incluido no caminho mais curto
+    int conjuntoCaminhoMinimo[V]; 
 
     for (int i = 0; i < V; i++) {
         distancia[i] = INT_MAX;
         conjunto_caminho_minimo[i] = 0;
-        caminho_anterior[i] = -1; // Inicializa o parent de todos os vertices como -1
+        caminho_anterior[i] = -1; 
     }
 
     distancia[indice] = 0;
@@ -82,7 +82,7 @@ int main()
  switch(op)
  {
  case 1:
- printf("");//SELECIONAR PONTO DE ROTA
+ printf("");
  break;
  case 2:
  printf("///////////////////////////////////// \n\n");
@@ -110,11 +110,11 @@ int main()
  	
 void printPath(int parent[], int j) {
     if (parent[j] == -1) {
-        printf("%d ", j + 1);  // Adiciona 1 para exibir os vertices na base 1
+        printf("%d ", j + 1);  
         return;
     }
     printPath(parent, parent[j]);
-    printf("%d ", j + 1);  // Adiciona 1 para exibir os vertices na base 1
+    printf("%d ", j + 1); 
 }
 break;
  case 0:
